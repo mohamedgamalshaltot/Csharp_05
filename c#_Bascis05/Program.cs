@@ -47,6 +47,24 @@ namespace c__Bascis05
             AddBonusPages(pages);
             Console.WriteLine(pages);
             #endregion
+            #region Question 06
+             //6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+            // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+            double[] prices2 = [ 25.5, 40.0 ];
+            ApplyDiscount(prices2);
+            Console.WriteLine(prices2[0]);
+            //(why)لان ال شققشغ هنا بتمر لby reference typeهذا يعني ان ال Method تعدل مباشره في البيانات الموجودخ داخل المصفوفه في الذاكره.
+
+            #endregion
+            #region Question 07
+              //7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+             //Call it and print pages afterward. How is the result different from question 5 ?
+             int pages2 = 400;
+            AddBonusPagesByRef(ref pages2);
+            Console.WriteLine(pages2);
+
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -67,5 +85,16 @@ namespace c__Bascis05
         {
             pages += 50;
         }
+        //Question 06 Method
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+        }
+        //Question 07 Method
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+        }
+
     }
 }
