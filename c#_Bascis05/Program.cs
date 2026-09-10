@@ -94,6 +94,13 @@ namespace c__Bascis05
             PrintBookInfo("Clean Code", 400);
 
             #endregion
+            #region Question03 in session 05
+            //3-Using the PrintBookInfo method from the question above, call it by naming
+            // the parameters, passing pages before title.
+            PrintBookInfo01(pages: 400, title: "Clean Code");
+
+
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -145,9 +152,14 @@ namespace c__Bascis05
             //Question 02 in session 05 Method
 
         }
-        static void PrintBookInfo(string title, int pages=300)
-            {
-                Console.WriteLine($"Title: {title}, pages: {pages}");
-            }
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Title: {title}, pages: {pages}");
+        }
+        static void PrintBookInfo01(string title, int pages = 300)
+        {
+
+            Console.WriteLine($"Title: {title}, pages: {pages}");
         }
     }
+}
