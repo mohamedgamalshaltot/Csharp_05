@@ -101,6 +101,12 @@ namespace c__Bascis05
 
 
             #endregion
+            #region Question04 in session 05
+            //4-Write a method PrintAllTitles(params string[] titles) that prints each title on its
+            //own line. Call it with three book titles.
+            PrintAllTitles("Clean Code", "The Pragmatic Programmer", "Design Patterns");
+
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -160,6 +166,13 @@ namespace c__Bascis05
         {
 
             Console.WriteLine($"Title: {title}, pages: {pages}");
+        }
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
