@@ -16,10 +16,10 @@ namespace c__Bascis05
             #region Question 02
             //2-Create a 2x2 multidimensional array int[,] shelfCopies where shelf 0 has 3, 5 copies and
             //shelf 1 has 1, 4 copies.Print the number of copies on shelf 1, slot 0.
-            int[,] shelfCopies = { 
-                { 3, 5 }, { 1, 4 } 
+            int[,] shelfCopies = {
+                { 3, 5 }, { 1, 4 }
             };
-            Console.WriteLine(shelfCopies[1,0]);
+            Console.WriteLine(shelfCopies[1, 0]);
 
 
             #endregion
@@ -31,6 +31,14 @@ namespace c__Bascis05
             }
 
             #endregion
+            #region Question 04
+            //4-Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            //"Clean Code".
+            {
+                PrintBookTitle("Clean Code");
+            }
+
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -39,5 +47,12 @@ namespace c__Bascis05
             Console.WriteLine("Welcome to the Library!");
         }
         #endregion
+
+        //Question 04 Method
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine("Book title: " + title);
+        }
+
     }
 }
