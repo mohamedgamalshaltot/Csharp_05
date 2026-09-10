@@ -1,4 +1,5 @@
-﻿using System.Runtime.Intrinsics.X86;
+﻿using System.Drawing;
+using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace c__Bascis05
@@ -48,22 +49,30 @@ namespace c__Bascis05
             Console.WriteLine(pages);
             #endregion
             #region Question 06
-             //6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+            //6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
             // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why?
-            double[] prices2 = [ 25.5, 40.0 ];
+            double[] prices2 = [25.5, 40.0];
             ApplyDiscount(prices2);
             Console.WriteLine(prices2[0]);
             //(why)لان ال شققشغ هنا بتمر لby reference typeهذا يعني ان ال Method تعدل مباشره في البيانات الموجودخ داخل المصفوفه في الذاكره.
 
             #endregion
             #region Question 07
-              //7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
-             //Call it and print pages afterward. How is the result different from question 5 ?
-             int pages2 = 400;
+            //7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+            int pages2 = 400;
             AddBonusPagesByRef(ref pages2);
             Console.WriteLine(pages2);
 
+            #endregion
+            #region Question 08
+            //8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+            double[] Prices = [10.0, 12.5, 15.0,];
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
             #endregion
         }
         #region Methods Area 
@@ -95,6 +104,10 @@ namespace c__Bascis05
         {
             pages += 50;
         }
-
+        //Question 08 Method
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
     }
 }
