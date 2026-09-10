@@ -74,6 +74,20 @@ namespace c__Bascis05
             ReplaceArray(ref prices);
             Console.WriteLine(prices.Length);
             #endregion
+            #region Question01 in session 05
+            //1-Write a method bool TryGetPrice(string title, out double price) that returns
+            //true and sets price to 25.5 if title is "Clean Code", otherwise returns false and
+            //  sets price to 0.Call it and print the price if found
+            if (TryGetPrice("Clean Code", out double price))
+            {
+                Console.WriteLine("Price: " + price);
+            }
+            else
+            {
+                Console.WriteLine("Book not found.");
+            }
+
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -108,6 +122,21 @@ namespace c__Bascis05
         static void ReplaceArray(ref double[] prices)
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+        //Question 01 in session 05 Method
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+
         }
     }
 }
