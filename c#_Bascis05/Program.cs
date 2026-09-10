@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Runtime.Intrinsics.X86;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace c__Bascis05
 {
@@ -39,6 +40,13 @@ namespace c__Bascis05
             }
 
             #endregion
+            #region Question 05
+            //5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -54,5 +62,10 @@ namespace c__Bascis05
             Console.WriteLine("Book title: " + title);
         }
 
+        //Question 05 Method
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+        }
     }
 }
