@@ -23,6 +23,21 @@ namespace c__Bascis05
 
 
             #endregion
+            #region Question 03
+            //3-Write a method called PrintWelcomeMessage that takes no parameters and prints
+            //"Welcome to the Library!".Call it from Main.
+            {
+                PrintWelcomeMessage();
+            }
+
+            #endregion
         }
+        #region Methods Area 
+        //Question 03 Method
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
     }
 }
