@@ -87,6 +87,12 @@ namespace c__Bascis05
                 Console.WriteLine("Book not found.");
             }
 
+            # endregion
+            #region Question02 in session 05
+            //2-Write a method void PrintBookInfo(string title, int pages = 300) that prints the title
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Clean Code", 400);
+
             #endregion
         }
         #region Methods Area 
@@ -136,7 +142,12 @@ namespace c__Bascis05
                 price = 0;
                 return false;
             }
+            //Question 02 in session 05 Method
 
         }
+        static void PrintBookInfo(string title, int pages=300)
+            {
+                Console.WriteLine($"Title: {title}, pages: {pages}");
+            }
+        }
     }
-}
