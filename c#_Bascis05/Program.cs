@@ -107,6 +107,12 @@ namespace c__Bascis05
             PrintAllTitles("Clean Code", "The Pragmatic Programmer", "Design Patterns");
 
             #endregion
+            #region Question01 Access Modifiers
+            //1-Add a private string password = "secret"; field to a Book class. Try to
+            //print it from Main (outside the class). What happens, and why?
+            book myBook = new book();
+            Console.WriteLine(myBook.password); // This will cause a compilation error because 'password' is private and cannot be accessed from outside the 'book' class.
+            #endregion
         }
         #region Methods Area 
         //Question 03 Method
@@ -114,7 +120,7 @@ namespace c__Bascis05
         {
             Console.WriteLine("Welcome to the Library!");
         }
-        #endregion
+       
 
         //Question 04 Method
         static void PrintBookTitle(string title)
@@ -162,11 +168,13 @@ namespace c__Bascis05
         {
             Console.WriteLine($"Title: {title}, pages: {pages}");
         }
+        //Question 03 in session 05 Method
         static void PrintBookInfo01(string title, int pages = 300)
         {
 
             Console.WriteLine($"Title: {title}, pages: {pages}");
         }
+        //Question 04 in session 05 Method
         static void PrintAllTitles(params string[] titles)
         {
             foreach (string title in titles)
@@ -174,5 +182,11 @@ namespace c__Bascis05
                 Console.WriteLine(title);
             }
         }
+        //Question 01 in session 05 Method(Access Modifiers)
+        class book
+        {
+            private string password = "secret";
+        }
+        #endregion
     }
 }
