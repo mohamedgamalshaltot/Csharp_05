@@ -112,7 +112,7 @@ namespace c__Bascis05
             //1-Add a private string password = "secret"; field to a Book class. Try to
             //print it from Main (outside the class). What happens, and why?
             Book myBook = new Book();
-            Console.WriteLine(myBook.password); // This will cause a compilation error because 'password' is private and cannot be accessed from outside the 'book' class.
+           // Console.WriteLine(myBook.password); // This will cause a compilation error because 'password' is private and cannot be accessed from outside the 'book' class.
             #endregion
             #region Question02 Access Modifiers
             //2-Add an internal int copiesInStock = 5; field to Book. Print it from Main.
