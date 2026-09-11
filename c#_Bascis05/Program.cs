@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Numerics;
 using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -110,8 +111,21 @@ namespace c__Bascis05
             #region Question01 Access Modifiers
             //1-Add a private string password = "secret"; field to a Book class. Try to
             //print it from Main (outside the class). What happens, and why?
-            book myBook = new book();
+            Book myBook = new Book();
             Console.WriteLine(myBook.password); // This will cause a compilation error because 'password' is private and cannot be accessed from outside the 'book' class.
+            #endregion
+            #region Question02 Access Modifiers
+            //2-Add an internal int copiesInStock = 5; field to Book. Print it from Main.
+            // Does it compile? Why?
+            Book myBook2 = new Book();
+            Console.WriteLine(myBook2.copiesInStock); // YES, it compiles because 'copiesInStock' is internal and can be accessed from within the same assembly(Project).
+            #endregion
+            #region Question03 Access Modifier
+            //3-Add a public string Title; field to Book. Set it and print it from Main.
+            Book myBook3 = new Book();
+            myBook3.Title = "Clean Code";
+            Console.WriteLine(myBook3.Title);
+
             #endregion
         }
         #region Methods Area 
@@ -182,11 +196,17 @@ namespace c__Bascis05
                 Console.WriteLine(title);
             }
         }
-        //Question 01 in session 05 Method(Access Modifiers)
-        class book
+        
+        class Book
         {
-            private string password = "secret";
+            private string password = "secret";//Question 01 in session 05 Method(Access Modifiers)
+            internal int copiesInStock = 5;//Question 02 in session 05 Method(Access Modifiers)
+
+            public string Title;//Question 03 in session 05 Method(Access Modifiers)
+
         }
-        #endregion
+
+       
     }
+        #endregion
 }
